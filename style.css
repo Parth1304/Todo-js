@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: aliceblue;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header{
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center  ;
+}
+
+
+form input{
+    padding: 0.5rem;
+    border: none;
+}
+
+.container{
+    background-color: rgb(24, 24, 24);
+    border-radius: 5px;
+    width: 500px;
+    padding: 15px;
+    overflow: hidden;
+    
+
+}
+
+.todo-input{
+    width: 80%;
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 10px;
+    height: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.todo-add-button{
+    padding: 7px 28px;
+    border: none;
+    height: 2.3rem;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #4ca1af, #c4e0e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+.todo-container{ 
+    max-height: 70vh; 
+    overflow-y: auto; 
+    margin-top: 20px;
+    padding-right: 10px;
+
+}
+
+.todo-item-container{
+    display: flex;
+    margin-bottom: 5px;
+    background-color: rgb(40, 54, 69);
+    padding: 10px 10px;
+    border-radius: 10px;
+
+}
+
+.todo-text{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    
+    
+}
+
+.edit-button,.delete-button{
+    padding: 7px 20px;
+    border: none;
+    background-image: linear-gradient(to right, #4ca1af, #c4e0e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+.completed {
+    text-decoration: line-through;
+    text-decoration-color: #555;
+    text-decoration-thickness: 2px;
+}
