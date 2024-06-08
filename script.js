@@ -18,9 +18,9 @@ function addTodoItem(textInputField) {
     const todoItemContainer = document.createElement('div');
     todoItemContainer.className = 'todo-item-container';
 
-    const textInputFieldElement = document.createElement('p');
-    textInputFieldElement.textContent = textInputField;
-    textInputFieldElement.className = 'todo-text';
+    const todoText = document.createElement('p');
+    todoText.textContent = textInputField;
+    todoText.className = 'todo-text';
 
     const editButton = document.createElement('button');
     editButton.textContent = 'Edit';
@@ -31,17 +31,14 @@ function addTodoItem(textInputField) {
     deleteButton.className = 'delete-button';
 
         
-    textInputFieldElement.addEventListener('click', function(){
-        textInputFieldElement.classList.toggle('completed');
+    todoText.addEventListener('click', function(){
+        todoText.classList.toggle('completed');
     });
 
-
-
-    
     editButton.addEventListener('click', function() {
         const newText = prompt('Edit your todo: ');
         if (newText !== null && newText.trim() !== '') {
-            textInputFieldElement.textContent = newText;
+            todoText.textContent = newText;
         }
     });
 
@@ -49,7 +46,7 @@ function addTodoItem(textInputField) {
         todoContainer.removeChild(todoItemContainer);
     });
 
-    todoItemContainer.appendChild(textInputFieldElement);
+    todoItemContainer.appendChild(todoText);
     todoItemContainer.appendChild(editButton);
     todoItemContainer.appendChild(deleteButton);
     todoContainer.appendChild(todoItemContainer);
